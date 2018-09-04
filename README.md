@@ -4,7 +4,7 @@ Title: Undercooked
 
 Author: James Gualtieri
 
-Design Document: https://github.com/jamesgualtieri/game0_design_doc
+Design Document: https://github.com/jamesgualtieri/game0_design_doc / http://graphics.cs.cmu.edu/courses/15-466-f18/game0-designs/jgualtie/
 
 Screen Shot:
 
