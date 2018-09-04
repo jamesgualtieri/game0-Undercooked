@@ -28,6 +28,9 @@ struct Game {
 	//draw is called after update:
 	void draw(glm::uvec2 drawable_size);
 
+	//call init on completed sandwhich :)
+	void init();
+
 	//------- opengl resources -------
 
 	//shader program that draws lit objects with vertex colors:
@@ -59,10 +62,16 @@ struct Game {
 	};
 
 	Mesh tile_mesh;
-	Mesh cursor_mesh;
-	Mesh doll_mesh;
-	Mesh egg_mesh;
-	Mesh cube_mesh;
+	Mesh chef_mesh;
+	Mesh pb_mesh;
+	Mesh j_mesh;
+	Mesh bread_mesh;
+	Mesh floor_mesh;
+	Mesh counter_mesh;
+	Mesh serve_mesh;
+	Mesh pb_icon;
+	Mesh j_icon;
+	Mesh bread_icon;
 
 	GLuint meshes_for_simple_shading_vao = -1U; //vertex array object that describes how to connect the meshes_vbo to the simple_shading_program
 
@@ -70,9 +79,12 @@ struct Game {
 
 	glm::uvec2 board_size = glm::uvec2(5,4);
 	std::vector< Mesh const * > board_meshes;
-	std::vector< glm::quat > board_rotations;
 
-	glm::uvec2 cursor = glm::vec2(0,0);
+	glm::uvec2 cursor = glm::vec2(1,1);
+	glm::uvec2 active_square = glm::vec2(1,0);
+	uint32_t index = 0;
+
+	glm::vec2 ico_pos = glm::vec2(1,1);
 
 	struct {
 		bool roll_left = false;
@@ -80,5 +92,11 @@ struct Game {
 		bool roll_up = false;
 		bool roll_down = false;
 	} controls;
+
+	bool got_bread = false;
+	bool got_pb = false;
+	bool got_j = false;
+	bool serve_food = false;
+	float chef_angle = 0.0f;
 
 };

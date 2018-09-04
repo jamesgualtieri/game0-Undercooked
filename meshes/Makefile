@@ -5,7 +5,8 @@ HOSTNAME := $(shell hostname)
 ifeq ($(HOSTNAME), incepchow)
 	BLENDER = ~/blender-2.79b-linux-glibc219-x86_64/blender
 else
-	BLENDER = blender
+	# BLENDER = blender
+	BLENDER = /Applications/blender.app/Contents/MacOS/blender
 endif
 
 DIST=../dist

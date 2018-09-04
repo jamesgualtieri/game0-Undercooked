@@ -87,6 +87,8 @@ for name in to_write:
 			uvs = obj.data.uv_layers.active.data
 
 	#write the mesh:
+	color_i = 0 # Blender stores all vertex colors for a mesh in a loop
+		
 	for poly in mesh.polygons:
 		assert(len(poly.loop_indices) == 3)
 		for i in range(0,3):
@@ -99,8 +101,15 @@ for name in to_write:
 				data += struct.pack('f', x)
 			#TODO: set 'col' based on object's active vertex colors array.
 			# you should be able to use code much like the texcoord code below.
-			col = mathutils.Color((1.0, 1.0, 1.0))
+
+			# col = mathutils.Color((1.0, 1.0, 1.0)) # old line
+			col = mesh.vertex_colors.active.data[color_i].color
+			# The vertex color loop follows the same pattern as the vertex loop
+			# Each vertex has a color influence per each face
+
 			data += struct.pack('BBBB', int(col.r * 255), int(col.g * 255), int(col.b * 255), 255)
+			color_i += 1
+			# increment our counter after we add the color.
 
 			if do_texcoord:
 				if uvs != None:
