@@ -1,11 +1,11 @@
 # Game Information
 (Note: fill in this portion with information about your game.)
 
-Title: (TODO: your game's title)
+Title: Undercooked
 
-Author: (TODO: your name)
+Author: James Gualtieri
 
-Design Document: [TODO: name of design document](TODO: link to design document)
+Design Document: 
 
 Screen Shot:
 
@@ -13,11 +13,11 @@ Screen Shot:
 
 Difficulties Encountered:
 
-TODO: write several sentences about any difficulties you may have encountered in creating the game.
+I have only a very basic understanding of OpenGL and its subsequent implementations, so it took me a while to get used to the syntax and understand how the base code works. In addition, I found it difficult to get the orientation and position of the collected items to work properly.
 
 Good Code:
 
-TODO: write a sentence or two about any code you think you did particularly well.
+The game uses the basic event and update loop of the base code to allow for item collection. An `init()` function was added to allow for a randomized reset of the game board.
 
 # Using This Base Code
 
