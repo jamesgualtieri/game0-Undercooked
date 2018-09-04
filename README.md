@@ -12,7 +12,7 @@ Screen Shot:
 
 Difficulties Encountered:
 
-I have only a very basic understanding of OpenGL and its subsequent implementations, so it took me a while to get used to the syntax and understand how the base code works. In addition, I found it difficult to get the orientation and position of the collected items to work properly.
+I have only a very basic understanding of OpenGL and its subsequent implementations, so it took me a while to get used to the syntax and understand how the base code works. In addition, I found it difficult to get the orientation and position of the collected items to work properly. In addition, getting the export code for the meshes to work properly was quite challenging, working with the Blender documentation specifically. This all is in addition to the fact that I am not particularly familiar with creating assets to begin with.
 
 Good Code:
 
