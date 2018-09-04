@@ -1,11 +1,10 @@
 # Game Information
-(Note: fill in this portion with information about your game.)
 
 Title: Undercooked
 
 Author: James Gualtieri
 
-Design Document: 
+Design Document: https://github.com/jamesgualtieri/game0_design_doc
 
 Screen Shot:
 
